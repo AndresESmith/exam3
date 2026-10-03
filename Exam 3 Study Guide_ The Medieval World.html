@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Exam 3 Study Guide: The Medieval World</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#f2f5f9; --surface:#ffffff; --surface2:#e9eef5; --ink:#16213a; --muted:#566280; --line:#d6dde9;
+  --c9:#2b4c9b; --c10:#17776a; --c11:#85359a;
+  --c9t:#e6edfb; --c10t:#e0f3ef; --c11t:#f3e6f8;
+  --gold:#e3a72f; --trapbg:#fff3d1; --trapink:#5e4200;
+  --good:#17776a; --goodbg:#dff3ee; --bad:#b0344a; --badbg:#fbe4e8;
+  --hf:"Fraunces",Georgia,"Times New Roman",serif;
+  --bf:"Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0e1525; --surface:#17213a; --surface2:#1f2b49; --ink:#e8edf7; --muted:#a2aecb; --line:#2c3a5c;
+    --c9:#8fb0ff; --c10:#62d1bf; --c11:#d79bec;
+    --c9t:#1d2b52; --c10t:#12342f; --c11t:#35193f;
+    --trapbg:#3a2d0c; --trapink:#f6dc9a;
+    --good:#62d1bf; --goodbg:#12342f; --bad:#ff8fa3; --badbg:#42151f;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0e1525; --surface:#17213a; --surface2:#1f2b49; --ink:#e8edf7; --muted:#a2aecb; --line:#2c3a5c;
+  --c9:#8fb0ff; --c10:#62d1bf; --c11:#d79bec;
+  --c9t:#1d2b52; --c10t:#12342f; --c11t:#35193f;
+  --trapbg:#3a2d0c; --trapink:#f6dc9a;
+  --good:#62d1bf; --goodbg:#12342f; --bad:#ff8fa3; --badbg:#42151f;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--bf);font-size:16px;line-height:1.55}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:6px}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px}
+
+/* Header */
+header.top{padding:28px 0 8px}
+h1{font-family:var(--hf);font-weight:700;font-size:clamp(1.9rem,6vw,2.7rem);line-height:1.1;margin:0 0 8px;letter-spacing:-.01em}
+.sub{color:var(--muted);margin:0 0 18px;max-width:56ch}
+.progress{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.pbar{height:10px;background:var(--surface2);border-radius:99px;overflow:hidden;margin:8px 0 12px}
+.pbar>i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--c9),var(--c10),var(--c11));transition:width .4s}
+.pline{display:flex;justify-content:space-between;gap:10px;font-weight:600;font-size:.95rem}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:var(--surface2);border-radius:99px;padding:3px 11px;font-size:.82rem;font-weight:600}
+.chip.c9{color:var(--c9)}.chip.c10{color:var(--c10)}.chip.c11{color:var(--c11)}
+.themebtn{float:right;background:var(--surface);border:1px solid var(--line);border-radius:99px;padding:6px 12px;font-size:.82rem;margin-top:2px}
+
+/* Tabs */
+nav.tabs{position:sticky;top:0;z-index:20;background:var(--bg);padding:calc(env(safe-area-inset-top,0px) + 8px) 0 8px;border-bottom:1px solid var(--line);margin-top:14px}
+nav.tabs .wrap{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+nav.tabs button{flex:1 0 auto;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:9px 14px;font-weight:600;font-size:.92rem;white-space:nowrap}
+nav.tabs button[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+main{padding:18px 0 60px}
+.view[hidden]{display:none}
+
+/* Study */
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tools input[type=search]{flex:1 1 200px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:10px;padding:10px 12px;font:inherit}
+.seg{display:flex;gap:6px;flex-wrap:wrap}
+.seg button{border:1px solid var(--line);background:var(--surface);border-radius:99px;padding:7px 13px;font-size:.88rem;font-weight:600}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chhead{display:flex;align-items:baseline;gap:10px;margin:26px 0 10px;padding-bottom:6px;border-bottom:3px solid var(--cc)}
+.chhead h2{font-family:var(--hf);font-size:1.45rem;margin:0}
+.chhead span{color:var(--muted);font-size:.9rem}
+.ch9{--cc:var(--c9);--ct:var(--c9t)}.ch10{--cc:var(--c10);--ct:var(--c10t)}.ch11{--cc:var(--c11);--ct:var(--c11t)}
+details.topic{background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--cc);border-radius:12px;margin-bottom:10px}
+details.topic[open]{box-shadow:0 2px 0 var(--line)}
+details.topic summary{list-style:none;cursor:pointer;padding:13px 14px;display:flex;gap:10px;align-items:flex-start}
+details.topic summary::-webkit-details-marker{display:none}
+.tick{flex:0 0 22px;height:22px;border-radius:50%;border:2px solid var(--line);margin-top:2px;display:grid;place-items:center;font-size:.8rem;color:transparent}
+details.topic.done .tick{background:var(--good);border-color:var(--good);color:#fff}
+details.topic.done .tick::after{content:"\2713"}
+.tt{font-weight:600;display:block}
+.gist{display:block;color:var(--muted);font-size:.88rem;margin-top:2px}
+.caret{margin-left:auto;color:var(--muted);transition:transform .2s;flex:0 0 auto}
+details[open] .caret{transform:rotate(90deg)}
+.body{padding:2px 16px 16px 16px;border-top:1px dashed var(--line)}
+.body p.lead{margin:12px 0 8px;font-family:var(--hf);font-size:1.05rem}
+.body ul{margin:8px 0 12px;padding-left:20px}
+.body li{margin:5px 0}
+.body li b{color:var(--cc)}
+.trap{background:var(--trapbg);color:var(--trapink);border-radius:10px;padding:10px 12px;font-size:.93rem;margin:10px 0}
+.hook{background:var(--ct);border-radius:10px;padding:10px 12px;font-size:.93rem;margin:10px 0}
+.btn{border:1px solid var(--ink);background:var(--ink);color:var(--bg);border-radius:10px;padding:10px 16px;font-weight:600}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn.good{background:var(--good);border-color:var(--good);color:#fff}
+details.topic.done .learn{background:transparent;color:var(--ink);border-color:var(--line)}
+.empty{color:var(--muted);text-align:center;padding:30px 10px}
+
+/* Flashcards */
+.card-scene{perspective:1100px;margin:14px 0}
+.fcard{position:relative;width:100%;min-height:250px;cursor:pointer;transform-style:preserve-3d;transition:transform .45s;border:0;background:none;padding:0;text-align:left}
+.fcard.flip{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;background:var(--surface);border:1px solid var(--line);border-top:8px solid var(--cc);border-radius:16px;padding:20px;display:flex;flex-direction:column;justify-content:center;overflow:auto}
+.face.back{transform:rotateY(180deg);background:var(--ct)}
+.face small{color:var(--muted);font-weight:600;margin-bottom:8px}
+.face .q{font-family:var(--hf);font-size:1.3rem;line-height:1.3}
+.face .a{font-size:1.02rem}
+.fcount{display:flex;justify-content:space-between;color:var(--muted);font-size:.9rem}
+.row{display:flex;gap:10px;flex-wrap:wrap}
+.row .btn{flex:1}
+.hint{color:var(--muted);font-size:.88rem;text-align:center;margin:6px 0 0}
+label.chk{display:flex;gap:8px;align-items:center;font-size:.92rem;margin:10px 0}
+@media (prefers-reduced-motion:reduce){.fcard,.pbar>i,.caret{transition:none}}
+
+/* Quiz */
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px}
+.panel h2,.panel h3{font-family:var(--hf);margin:0 0 10px}
+.qmeta{display:flex;justify-content:space-between;color:var(--muted);font-size:.9rem;margin-bottom:8px}
+.qtext{font-family:var(--hf);font-size:1.2rem;line-height:1.35;margin:6px 0 14px}
+.opt{display:block;width:100%;text-align:left;background:var(--surface);border:2px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:9px;font-size:1rem}
+.opt:hover:not(:disabled){border-color:var(--ink)}
+.opt.right{border-color:var(--good);background:var(--goodbg)}
+.opt.wrong{border-color:var(--bad);background:var(--badbg)}
+.why{border-radius:10px;padding:11px 13px;margin:12px 0;font-size:.95rem;background:var(--surface2)}
+.score{font-family:var(--hf);font-size:3rem;font-weight:700;line-height:1;margin:6px 0}
+.miss{border-left:5px solid var(--bad);background:var(--surface2);border-radius:8px;padding:10px 12px;margin:10px 0;font-size:.93rem}
+.field{margin:12px 0}
+.field>span{display:block;font-weight:600;margin-bottom:6px}
+
+/* Cram */
+.cram h3{font-family:var(--hf);font-size:1.25rem;margin:26px 0 8px}
+.tblwrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:480px;font-size:.92rem}
+th,td{padding:9px 11px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:var(--surface2);font-weight:600}
+tr:last-child td{border-bottom:0}
+.tl{list-style:none;margin:0;padding:0;border-left:3px solid var(--line)}
+.tl li{position:relative;padding:5px 0 8px 18px}
+.tl li::before{content:"";position:absolute;left:-8px;top:12px;width:13px;height:13px;border-radius:50%;background:var(--cc);border:2px solid var(--bg)}
+.tl b{font-weight:700;margin-right:6px}
+.top12{margin:0;padding-left:22px}.top12 li{margin:6px 0}
+footer{color:var(--muted);font-size:.85rem;text-align:center;padding:10px 0 30px}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <button class="themebtn" id="themeBtn" type="button" aria-label="Switch light or dark theme">Theme</button>
+    <h1>Exam 3 Study Guide: The Medieval World</h1>
+    <p class="sub">Chapters 9, 10 and 11. Every topic from your checklist, the facts most likely to show up on the multiple choice test, flashcards, and a practice quiz.</p>
+    <div class="progress" aria-live="polite">
+      <div class="pline"><span id="pText">0 of 29 topics learned</span><span id="pPct">0%</span></div>
+      <div class="pbar"><i id="pFill"></i></div>
+      <div class="chips"><span class="chip c9" id="c9p">Ch 9: 0/12</span><span class="chip c10" id="c10p">Ch 10: 0/7</span><span class="chip c11" id="c11p">Ch 11: 0/10</span></div>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Study sections"><div class="wrap" role="tablist">
+  <button role="tab" id="tab-study" aria-selected="true" data-view="study">Study</button>
+  <button role="tab" id="tab-cards" aria-selected="false" data-view="cards">Flashcards</button>
+  <button role="tab" id="tab-quiz" aria-selected="false" data-view="quiz">Practice quiz</button>
+  <button role="tab" id="tab-cram" aria-selected="false" data-view="cram">Cram sheet</button>
+</div></nav>
+
+<main><div class="wrap">
+  <section class="view" id="view-study" aria-labelledby="tab-study">
+    <div class="tools">
+      <input type="search" id="search" placeholder="Search topics and facts (try “Ali” or “plague”)" aria-label="Search the study guide">
+    </div>
+    <div class="seg" id="chFilter" role="group" aria-label="Filter by chapter">
+      <button data-ch="all" aria-pressed="true">All</button>
+      <button data-ch="9" aria-pressed="false">Chapter 9</button>
+      <button data-ch="10" aria-pressed="false">Chapter 10</button>
+      <button data-ch="11" aria-pressed="false">Chapter 11</button>
+    </div>
+    <div id="topicList"></div>
+  </section>
+
+  <section class="view" id="view-cards" aria-labelledby="tab-cards" hidden>
+    <div class="seg" id="cardCh" role="group" aria-label="Flashcard chapter">
+      <button data-ch="all" aria-pressed="true">All</button>
+      <button data-ch="9" aria-pressed="false">Ch 9</button>
+      <button data-ch="10" aria-pressed="false">Ch 10</button>
+      <button data-ch="11" aria-pressed="false">Ch 11</button>
+    </div>
+    <label class="chk"><input type="checkbox" id="hideKnown"> Hide cards I already know</label>
+    <div id="cardArea"></div>
+  </section>
+
+  <section class="view" id="view-quiz" aria-labelledby="tab-quiz" hidden>
+    <div id="quizArea"></div>
+  </section>
+
+  <section class="view cram" id="view-cram" aria-labelledby="tab-cram" hidden></section>
+</div></main>
+
+<footer><div class="wrap">Built from your Exam 3 checklist. Your textbook and lectures come first: if your class stressed a different detail, trust it.</div></footer>
+
+<script>
+/* ---------- DATA ---------- */
+const CHAPTERS = {9:"Chapter 9: Faith, Empires and the Rise of Medieval Europe",10:"Chapter 10: Trade, Land and Power",11:"Chapter 11: Crisis, Renaissance and Ming China"};
+
+const TOPICS = [
+/* ===== CHAPTER 9 ===== */
+{id:"muhammad",ch:9,title:"Muhammad in Islam",gist:"Prophet, Hijra in 622, the Five Pillars",
+ lead:"Muhammad (c. 570–632) is the founder of Islam and, for Muslims, the final prophet in a line that includes Abraham, Moses and Jesus.",
+ facts:[
+  "<b>Born in Mecca</b> around 570 CE to the Quraysh tribe. He worked as a merchant.",
+  "Around 610 he received revelations from God (Allah) through the <b>angel Gabriel</b>. These were collected as the <b>Quran</b>.",
+  "<b>622: the Hijra</b>, his move from Mecca to <b>Medina</b>, after persecution by Mecca's elite. This year starts the Islamic calendar.",
+  "In Medina he built the first Muslim community, the <b>umma</b>, which joined religious and political leadership.",
+  "630: he returned and took Mecca; the <b>Kaaba</b> was cleared of idols and became Islam's holiest site. He died in 632.",
+  "<b>Five Pillars:</b> shahada (declaration of faith), salat (prayer 5 times a day), zakat (charity), sawm (fasting in Ramadan), hajj (pilgrimage to Mecca).",
+  "Muslims treat Jews and Christians as <b>“People of the Book”</b> because they share earlier scriptures."],
+ trap:"Muhammad is the <b>final</b> prophet, not the only one. The Hijra is the <b>move to Medina</b>, not the pilgrimage (that is the hajj).",
+ hook:"Hijra = Heading out of Mecca. Hajj = Heading to Mecca.",
+ cards:[["What was the Hijra?","Muhammad's 622 move from Mecca to Medina. It marks the start of the Islamic calendar."],["Who delivered the revelations to Muhammad?","The angel Gabriel. The revelations became the Quran."],["Name the Five Pillars of Islam.","Shahada (faith), salat (prayer), zakat (charity), sawm (fasting in Ramadan), hajj (pilgrimage)."]]},
+
+{id:"abbasid",ch:9,title:"Contributions of the Abbasid dynasty in Baghdad",gist:"House of Wisdom, translation, math, medicine",
+ lead:"The Abbasids overthrew the Umayyads in 750 and ruled from Baghdad (founded 762), the center of an Islamic “Golden Age.”",
+ facts:[
+  "<b>Baghdad</b> was founded by caliph al-Mansur in 762 on the Tigris. It became one of the world's largest, richest cities.",
+  "<b>House of Wisdom:</b> a library and research center that translated Greek, Persian and Indian works into Arabic. This preserved ancient knowledge.",
+  "<b>Math:</b> al-Khwarizmi developed algebra (the word comes from his book). Scholars spread Hindu-Arabic numerals (our 0–9).",
+  "<b>Medicine:</b> Ibn Sina (Avicenna) wrote the <i>Canon of Medicine</i>, used in Europe for centuries. Al-Razi distinguished measles from smallpox.",
+  "<b>Science:</b> Ibn al-Haytham advanced optics; astronomers improved the astrolabe.",
+  "<b>Paper</b> making reached the Muslim world from China after the 751 Battle of Talas, making books cheap.",
+  "Non-Arab Muslims (especially <b>Persians</b>) gained high posts. The empire became cosmopolitan rather than purely Arab.",
+  "Decline: regional dynasties broke away; the Mongols sacked Baghdad in <b>1258</b>."],
+ trap:"Abbasids = <b>Baghdad</b> (and Persian influence). Umayyads = Damascus. Know that the Abbasids <b>preserved and expanded</b> knowledge, they didn't just copy it.",
+ hook:"Abbasid → Algebra, Avicenna, Archives of the House of Wisdom, Baghdad.",
+ cards:[["Where was the Abbasid capital and when was it founded?","Baghdad, founded in 762 by al-Mansur."],["What was the House of Wisdom?","A Baghdad center for translating and studying Greek, Persian and Indian texts."],["Name two Abbasid-era scholars and their contributions.","Al-Khwarizmi (algebra) and Ibn Sina/Avicenna (Canon of Medicine)."]]},
+
+{id:"islamafrica",ch:9,title:"Influences of Islam in Africa",gist:"Trade, Arabic, Swahili coast, Sahel kingdoms",
+ lead:"Islam reached Africa by conquest in the north and by merchants in the Sahara, Sahel and East African coast.",
+ facts:[
+  "<b>North Africa</b> (Egypt, the Maghrib) was conquered in the 600s and became Arabic-speaking and Muslim.",
+  "<b>Trans-Saharan trade:</b> Muslim Berber and Arab merchants brought Islam south to West Africa (Ghana, Mali, Songhai). Rulers often converted for trade and diplomatic advantages.",
+  "<b>Swahili Coast</b> (East Africa): Indian Ocean monsoon trade created Muslim city-states like <b>Kilwa, Mombasa and Mogadishu</b>. Swahili is a Bantu language with many Arabic words.",
+  "Changes: <b>Arabic writing and literacy</b>, Islamic law, mosques, schools and scholars (Timbuktu), and new trade partnerships across the Muslim world.",
+  "Many African rulers <b>blended</b> Islam with traditional beliefs (syncretism). Islam often stayed strongest among merchants and rulers in towns.",
+  "The Muslim slave trade also expanded across the Sahara and Indian Ocean."],
+ trap:"Islam spread to sub-Saharan Africa mostly <b>peacefully through trade</b>, not by large conquests. Watch for “conquest” as a wrong answer for West Africa and the Swahili Coast.",
+ hook:"Camels carried it across the Sahara; monsoon winds carried it down the East African coast.",
+ cards:[["How did Islam reach West Africa?","Mainly through Muslim merchants on trans-Saharan caravan routes. Rulers often converted."],["What is the Swahili Coast and why does it matter?","East African coast of Muslim trading city-states (Kilwa, Mombasa). Swahili blends Bantu and Arabic."],["Name three lasting influences of Islam in Africa.","Arabic literacy, Islamic law/schools (like at Timbuktu), and mosque architecture plus trade networks."]]},
+
+{id:"spread",ch:9,title:"Factors contributing to the spread of Islam",gist:"Conquest, tolerance, trade, Sufis, Arabic",
+ lead:"Islam grew from Arabia to Spain and India within about a century, then kept spreading peacefully.",
+ facts:[
+  "<b>Military conquest:</b> Arab armies took Syria, Egypt and Persia (Sasanian Empire fell ~642) after the Byzantines and Persians had exhausted each other. They reached Spain in 711 and were stopped in France at <b>Tours in 732</b>.",
+  "<b>Tolerance for “People of the Book”:</b> Jews and Christians could keep their faith if they paid the <b>jizya</b> (a tax). Converting meant lower taxes and better status, which motivated many.",
+  "<b>Trade networks:</b> merchants carried the faith along Silk Road, Indian Ocean and Saharan routes.",
+  "<b>Sufis</b> (Muslim mystics) were popular missionaries, especially in Africa, India and Central Asia.",
+  "<b>Arabic as a common language</b> and one religious law helped unify diverse peoples. The hajj connected Muslims everywhere.",
+  "The message was simple and offered a sense of <b>equality</b> among believers."],
+ trap:"“Forced conversion” is rarely the best answer. Typical correct answers: conquest of weakened empires, tax incentives, tolerance, trade, Sufi missionaries.",
+ hook:"C-T-T-S: Conquest, Tolerance (jizya), Trade, Sufis.",
+ cards:[["What was the jizya?","A tax paid by non-Muslims (People of the Book) in Muslim lands. Converting meant escaping it."],["Why were Arab armies able to conquer so quickly?","The Byzantine and Sasanian Persian empires were weakened by long wars with each other."],["Where were Muslim armies stopped in Europe?","Battle of Tours (Poitiers), 732, by Charles Martel's Franks."]]},
+
+{id:"split",ch:9,title:"Reasons for the split in Islam",gist:"Sunni vs. Shia: succession after Muhammad",
+ lead:"The split began as a political dispute over who should lead the Muslim community after Muhammad died in 632 without a clear successor.",
+ facts:[
+  "<b>Sunnis</b> believed the community should choose a leader (caliph). The first caliph was <b>Abu Bakr</b>, Muhammad's close companion and father-in-law.",
+  "<b>Shia</b> (“party of Ali”) believed leadership belonged to Muhammad's family: <b>Ali</b>, his cousin and son-in-law, and Ali's descendants.",
+  "Ali became the 4th caliph but was assassinated in <b>661</b>. The <b>Umayyad</b> dynasty took power.",
+  "<b>680, Battle of Karbala:</b> Ali's son <b>Husayn</b> was killed by Umayyad forces. Shia remember him as a martyr (Ashura).",
+  "Over time differences in religious authority and practice grew. Sunnis are the large majority (~85–90%) of Muslims today."],
+ trap:"The split was about <b>succession/leadership</b>, not about the Quran or the Five Pillars (both share those).",
+ hook:"Sunni = elect the leader. Shia = Ali's family.",
+ cards:[["What caused the Sunni–Shia split?","Disagreement over who should succeed Muhammad as leader."],["Who did the Shia support as rightful successor?","Ali, Muhammad's cousin and son-in-law, and his descendants."],["What happened at Karbala in 680?","Umayyad forces killed Husayn, Ali's son, a key martyrdom for Shia Muslims."]]},
+
+{id:"civilservice",ch:9,title:"Civil service exams during the Tang dynasty",gist:"Merit-based officials, Confucian classics",
+ lead:"The Tang (618–907) revived and expanded the Sui examination system to recruit officials by talent instead of birth.",
+ facts:[
+  "Candidates were tested on the <b>Confucian classics</b>, writing and poetry.",
+  "Goal: build a loyal, educated bureaucracy and <b>reduce the power of aristocratic families</b>.",
+  "It created the <b>scholar-gentry</b> class and spread Confucian values.",
+  "The Tang capital <b>Chang'an</b> was among the world's largest cities. The Tang is known for prosperity, poetry and trade on the Silk Road.",
+  "The exams only really took off later: they were <b>perfected in the Song dynasty</b>.",
+  "Tang rulers included <b>Empress Wu Zetian</b>, who promoted exam graduates."],
+ trap:"Exams = <b>merit over birth</b>. The system began earlier (Han ideas, Sui revival) and peaked later (Song), but the Tang expanded it.",
+ hook:"Tang = Test-takers, not Titled nobles.",
+ cards:[["What was the purpose of Tang civil service exams?","To choose government officials by merit and Confucian learning instead of aristocratic birth."],["What did exam candidates study?","The Confucian classics."],["Which Tang empress expanded the exam system?","Wu Zetian."]]},
+
+{id:"buddhism",ch:9,title:"Tang oppression of Buddhism",gist:"Emperor Wuzong, 845, wealth and foreign religion",
+ lead:"After centuries of popularity, Buddhism was suppressed in the mid-800s.",
+ facts:[
+  "Emperor <b>Wuzong</b> launched the major persecution in <b>845</b>.",
+  "Thousands of monasteries and temples were destroyed (~4,600 monasteries) and hundreds of thousands of monks and nuns were forced back to lay life.",
+  "<b>Why:</b> monasteries owned vast <b>tax-exempt land</b> and wealth while the government needed money.",
+  "Confucian officials and Daoists criticized Buddhism as a <b>foreign religion</b> that undermined family and state.",
+  "Result: Buddhism lost power and wealth in China. Some forms (like <b>Chan/Zen</b>) survived, and Confucianism gained."],
+ trap:"The main motive was <b>economic and political</b> (wealth, taxes, Confucian nationalism), not Muslim influence.",
+ hook:"Wuzong wanted the temples' wealth and the taxes.",
+ cards:[["Which emperor persecuted Buddhism and when?","Emperor Wuzong, in 845."],["Why did the Tang suppress Buddhism?","Monasteries were wealthy and tax-exempt, and Confucians saw Buddhism as foreign."],["Which type of Buddhism survived well?","Chan (Zen) Buddhism."]]},
+
+{id:"tangislam",ch:9,title:"Tang reaction to the threat from Islam",gist:"Battle of Talas 751, withdrawal from Central Asia",
+ lead:"As Abbasid and Tang power met in Central Asia, the Tang lost the contest.",
+ facts:[
+  "<b>Battle of Talas River (751):</b> an Abbasid army defeated a Tang army in Central Asia.",
+  "The Tang <b>pulled back</b> from Central Asia and Islam became dominant there.",
+  "Chinese prisoners reportedly taught <b>papermaking</b> to the Muslim world, which later reached Europe.",
+  "The Tang were also weakened by the <b>An Lushan rebellion (755)</b>, which pushed China to focus inward.",
+  "Tang still allowed Muslim merchants to live in port cities like <b>Guangzhou</b> and tolerated their trade."],
+ trap:"Talas 751 is the one fact to know: <b>Abbasids beat the Tang</b>, and <b>paper</b> spread west.",
+ hook:"Talas = Tang lost, paper traveled west.",
+ cards:[["What happened at the Battle of Talas River (751)?","The Abbasids defeated the Tang army, ending Chinese expansion west in Central Asia."],["What technology spread west after Talas?","Papermaking."],["What internal crisis hit the Tang in 755?","The An Lushan rebellion."]]},
+
+{id:"charlemagne",ch:9,title:"Importance of Charlemagne",gist:"Emperor in 800, Carolingian Renaissance",
+ lead:"Charlemagne (r. 768–814) united much of Western Europe and linked the Frankish monarchy with the Catholic Church.",
+ facts:[
+  "King of the <b>Franks</b>; expanded into Italy, Germany and parts of Spain.",
+  "Crowned <b>Emperor of the Romans by Pope Leo III on Christmas Day, 800</b>. This tied church and state and challenged Byzantium.",
+  "<b>Carolingian Renaissance:</b> revived education, built schools, copied manuscripts (with a new clear script, <b>Carolingian minuscule</b>), and brought in scholars like <b>Alcuin</b>.",
+  "Governed through <b>counts</b> and royal inspectors (<b>missi dominici</b>).",
+  "Spread Christianity, sometimes by force (e.g. against the Saxons).",
+  "His grandfather <b>Charles Martel</b> won at Tours (732).",
+  "After he died, the empire was split among his grandsons (<b>Treaty of Verdun, 843</b>)."],
+ trap:"Charlemagne = <b>unity + church alliance + learning</b>. He was not Roman Emperor in the old sense and not a Viking.",
+ hook:"Christmas 800: Crowned by the Pope.",
+ cards:[["When and by whom was Charlemagne crowned emperor?","Christmas Day 800, by Pope Leo III."],["What was the Carolingian Renaissance?","Charlemagne's revival of learning: schools, manuscript copying, scholars like Alcuin."],["Why is Charlemagne important?","He united much of Western Europe, allied with the Church, and promoted education."]]},
+
+{id:"church",ch:9,title:"Role of the church/Christianity in the Middle Ages",gist:"The unifying institution of Europe",
+ lead:"After Rome fell, the Catholic Church was the one institution that spanned all of Western Europe.",
+ facts:[
+  "<b>Unity:</b> shared faith, the <b>Latin</b> language and the authority of the <b>Pope</b> in Rome.",
+  "<b>Monasteries</b> (Benedictine rule) preserved learning, copied books, ran schools, hospitals and farms.",
+  "The Church held great <b>land and wealth</b> and collected the <b>tithe</b>.",
+  "It had its own courts (<b>canon law</b>) and could punish with <b>excommunication</b> or interdict, which gave it political power over kings.",
+  "It shaped daily life: sacraments, holy days, art, cathedrals and universities.",
+  "Popes called the <b>Crusades</b> (1095, Urban II). Missionaries converted peoples such as the Saxons, Slavs and Vikings.",
+  "Church vs. state conflicts, like the <b>Investiture Controversy</b>, tested papal power."],
+ trap:"If asked what kept Europe unified without a strong central government, answer <b>the Church</b>.",
+ hook:"Church = glue, school, court and landlord.",
+ cards:[["Why was the Church so powerful in medieval Europe?","It was the main unifying institution: religious authority, land, courts, education and the power to excommunicate."],["What role did monasteries play?","Preserved and copied texts, taught, ran hospitals and farms."],["What is excommunication?","Expelling someone from the Church, a powerful punishment even for kings."]]},
+
+{id:"vikings",ch:9,title:"Technology of the Vikings",gist:"Longships and river-and-ocean raiding",
+ lead:"Vikings from Scandinavia raided, traded and settled across Europe from about 793 to 1066.",
+ facts:[
+  "<b>Longship:</b> sleek, shallow-draft, clinker-built (overlapping planks) with <b>sail and oars</b>. It could cross the open ocean <i>and</i> go up shallow rivers and land on beaches.",
+  "<b>Knarr:</b> wider cargo ship for trade and settlement.",
+  "Raids began with <b>Lindisfarne</b> (793). Fast hit-and-run attacks on monasteries and towns.",
+  "Settlements: <b>Normandy</b> (Rollo, 911), the <b>Danelaw</b> in England, <b>Iceland</b>, <b>Greenland</b> (Erik the Red) and <b>Vinland/Newfoundland</b> (Leif Erikson, ~1000).",
+  "Swedish Vikings (the <b>Rus</b>) traveled down rivers to Kiev and Novgorod, trading with Byzantium and the Muslim world.",
+  "Their attacks pushed Europeans toward <b>feudalism</b> and local defense."],
+ trap:"The key Viking technology is the <b>longship</b> (shallow draft = ocean + rivers). Not the compass or lateen sail.",
+ hook:"Shallow longships = ocean and river access.",
+ cards:[["What was the key Viking technology?","The longship: shallow-draft, sail and oars, usable on oceans and rivers."],["Who reached North America around 1000?","Leif Erikson (Vinland)."],["How did Viking raids affect Europe?","They spurred local defense and feudalism and spread Viking settlement (Normandy, Danelaw)."]]},
+
+{id:"christsplit",ch:9,title:"Reasons for the split in Christianity",gist:"1054 Great Schism: Catholic vs. Eastern Orthodox",
+ lead:"Western (Roman Catholic) and Eastern (Orthodox) Christianity grew apart for centuries and formally split in 1054.",
+ facts:[
+  "<b>Authority:</b> the Pope claimed supremacy over all Christians; the Eastern patriarchs (of <b>Constantinople</b>) refused. In the East the emperor also had strong control over the church.",
+  "<b>Language and culture:</b> Latin in the West, Greek in the East.",
+  "<b>Icons:</b> the Byzantine emperor Leo III banned them (iconoclasm, 726), angering Rome.",
+  "<b>Doctrine and practice:</b> the <b>Filioque</b> clause added in the West; Eastern priests could marry; different bread for communion.",
+  "Politics: the Roman Empire had split; Charlemagne's crowning (800) offended Byzantium.",
+  "<b>1054:</b> the Pope's envoy and the Patriarch of Constantinople excommunicated each other: the <b>Great Schism</b>."],
+ trap:"1054 = Catholic/Orthodox split. The <b>Protestant Reformation</b> is a different split (1517, Luther).",
+ hook:"1054 East vs West: Pope in Rome, Patriarch in Constantinople.",
+ cards:[["When did the Great Schism occur and what did it create?","1054; it split Roman Catholic and Eastern Orthodox Christianity."],["Name two causes of the Christian split.","Papal authority vs. patriarchs; Latin vs. Greek; icons; priestly marriage; the Filioque."],["Who led the Eastern church?","The Patriarch of Constantinople (with strong influence from the Byzantine emperor)."]]},
+
+/* ===== CHAPTER 10 ===== */
+{id:"maritime",ch:10,title:"Innovations in maritime trade",gist:"Compass, lateen sail, junk, monsoon sailing",
+ lead:"Between 600 and 1450, improved ships and navigation tools linked the Indian Ocean, East Asia, Africa and the Mediterranean.",
+ facts:[
+  "<b>Magnetic compass:</b> invented in China, used for navigation at sea by Song times and later adopted by Muslims and Europeans.",
+  "<b>Lateen sail:</b> triangular sail used on Arab <b>dhows</b>, letting ships sail at angles to the wind.",
+  "<b>Chinese junk:</b> large ships with stern-post rudders, multiple masts and watertight compartments.",
+  "<b>Astrolabe:</b> measured the sun's and stars' height to find latitude (refined by Muslim scholars).",
+  "<b>Monsoon winds:</b> sailors learned to ride the seasonal winds across the Indian Ocean.",
+  "Result: bigger cargoes, long-distance trade, and prosperous port cities like <b>Guangzhou, Calicut, Kilwa, Malacca</b>."],
+ trap:"Match innovation to origin: compass and junk = China; lateen sail and astrolabe = Muslim/Arab world.",
+ hook:"Compass points, lateen angles, junk floats, monsoons push.",
+ cards:[["What advantage did the lateen sail provide?","Ships could sail across or partly against the wind."],["Which Chinese ship type featured watertight compartments and stern-post rudders?","The junk."],["What did the astrolabe help sailors do?","Find latitude by measuring the angle of the sun or stars."]]},
+
+{id:"feudal",ch:10,title:"Feudalism & Manorialism",gist:"Political system vs. economic system",
+ lead:"These two systems organized medieval Western Europe after Carolingian power collapsed amid Viking, Magyar and Muslim raids.",
+ facts:[
+  "<b>Feudalism (political/military):</b> a king or lord grants land (a <b>fief</b>) to a <b>vassal</b> in exchange for military service and loyalty. The hierarchy runs king → nobles → knights.",
+  "Knights lived by <b>chivalry</b> and fought from castles.",
+  "<b>Manorialism (economic):</b> the <b>manor</b> was a self-sufficient estate controlled by a lord and worked by <b>serfs</b>.",
+  "<b>Serfs</b> were tied to the land and owed the lord labor and a share of crops; in return they got protection. They were <b>not slaves</b> and could not be sold away from the land.",
+  "Peasants used the <b>three-field system</b> and the <b>heavy plow</b>, boosting food production and population.",
+  "Both systems supplied protection in the absence of a strong central government."],
+ trap:"Quick test: <b>Feudalism = land for loyalty/fighting</b> (lord ↔ vassal). <b>Manorialism = land for labor/crops</b> (lord ↔ serf).",
+ hook:"Feudalism = Fighters. Manorialism = Farmers.",
+ cards:[["Define feudalism.","A political/military system: lords grant land (fiefs) to vassals in return for military service and loyalty."],["Define manorialism.","An economic system: self-sufficient manors where serfs work the lord's land in exchange for protection."],["How were serfs different from slaves?","Serfs were tied to the land and owed labor but couldn't be sold apart from it, and had some customary rights."]]},
+
+{id:"musa",ch:10,title:"Mansa Musa's hajj to Mecca",gist:"1324 pilgrimage; Mali's gold shocked the world",
+ lead:"Mansa Musa ruled the Mali Empire (c. 1312–1337), then the richest kingdom in West Africa, built on gold.",
+ facts:[
+  "Mali was founded by <b>Sundiata Keita</b> (c. 1235).",
+  "Musa's <b>hajj in 1324–25</b> included a huge caravan with tens of thousands of people and large amounts of gold.",
+  "He gave away so much gold in <b>Cairo</b> that its value fell for years.",
+  "It made Mali famous: <b>European maps</b> (the Catalan Atlas, 1375) show him holding gold.",
+  "He returned with Muslim <b>scholars and architects</b>, who built mosques (e.g. in <b>Timbuktu</b>) and strengthened Islamic learning.",
+  "Showed Mali as a devout Muslim state and drew more trade and scholars."],
+ trap:"Pilgrimage = <b>hajj</b>. Musa's Mali was wealthy from <b>gold and salt trade</b>. Effects: fame, Islamic influence, Cairo's gold crash.",
+ hook:"Musa's gold flooded Cairo and put Mali on the map.",
+ cards:[["When was Mansa Musa's hajj and what was notable?","1324–25; he traveled with a huge caravan and spread so much gold that Cairo's gold value dropped."],["What long-term effects did Musa's hajj have?","Made Mali famous worldwide, brought scholars and architects, boosted Islam and Timbuktu."],["Who founded the Mali Empire?","Sundiata Keita."]]},
+
+{id:"timbuktu",ch:10,title:"Importance of Timbuktu",gist:"Trade crossroads and center of Islamic learning",
+ lead:"Timbuktu, on the southern edge of the Sahara near the Niger River, became the great city of West Africa.",
+ facts:[
+  "<b>Trade hub:</b> caravans met river traffic. Gold and slaves from the south were exchanged for salt, cloth, and goods from North Africa.",
+  "<b>Learning center:</b> mosques and schools such as <b>Sankore</b> attracted scholars; huge manuscript libraries.",
+  "Part of <b>Mali</b>, then <b>Songhai</b> (Askia Muhammad). Prospered under Mansa Musa.",
+  "Spread Islam and Arabic literacy in West Africa.",
+  "Morocco captured it in <b>1591</b>, starting its decline as trade moved to the coasts."],
+ trap:"Two jobs: <b>trade + scholarship</b>. If a choice says only one, look for the answer with both.",
+ hook:"Timbuktu = Trade and Texts.",
+ cards:[["Why was Timbuktu important?","It was a trans-Saharan trade crossroads and a major center of Islamic scholarship."],["Which empires controlled Timbuktu?","Mali, then Songhai (later Morocco captured it in 1591)."],["Name a famous Timbuktu school/mosque.","Sankore."]]},
+
+{id:"africacommod",ch:10,title:"Trade commodities from sub-Saharan Africa",gist:"Gold, salt, slaves, ivory, kola",
+ lead:"Sub-Saharan Africa traded across the Sahara, the Indian Ocean and along the Niger.",
+ facts:[
+  "<b>Gold</b> (from West Africa such as Bambuk and Bure; and Great Zimbabwe in the south-east) was the top export.",
+  "<b>Salt</b> from the Sahara (e.g. Taghaza) was heavily demanded in the south, so gold and salt were traded.",
+  "<b>Slaves</b> were exported north and east.",
+  "<b>Ivory, kola nuts, cotton cloth, copper, ostrich feathers, cowrie shells</b>.",
+  "Imports: <b>cloth, horses, glass beads, porcelain, books, weapons</b>.",
+  "Camel caravans guided by Berber/Tuareg crossed the desert; Swahili ships carried goods across the Indian Ocean."],
+ trap:"The classic trade is <b>gold for salt</b>. The rest are good distractors. East Africa: <b>gold, ivory, slaves</b>.",
+ hook:"Gold south-to-north, salt north-to-south.",
+ cards:[["What was the most famous trade pair across the Sahara?","Gold (from the south) for salt (from the Sahara/north)."],["Name three exports of sub-Saharan Africa.","Gold, ivory, slaves, kola nuts, cloth, copper."],["What animal made Saharan trade possible?","The camel."]]},
+
+{id:"americastrade",ch:10,title:"Trade in Native American civilizations",gist:"Aztec pochteca, Inca roads, Mississippian networks",
+ lead:"Without wheeled vehicles or large pack animals (except the llama), Native American trade relied on people and canoes.",
+ facts:[
+  "<b>Aztec (Mexica):</b> capital <b>Tenochtitlan</b> (1325) with huge markets like <b>Tlatelolco</b>. Professional merchants called <b>pochteca</b>. <b>Cacao beans</b> were currency. Goods: cacao, jade, feathers, obsidian, cotton. They also demanded <b>tribute</b> from conquered peoples.",
+  "<b>Maya:</b> city-states traded jade, obsidian, cacao and salt.",
+  "<b>Inca:</b> the Andes empire used an extensive <b>road system</b> and a <b>labor tax (mit'a)</b>, with a redistribution economy rather than market trade and currency. <b>Llamas</b> were pack animals; <b>quipu</b> kept records.",
+  "<b>North America:</b> Mississippian culture (<b>Cahokia</b>) traded copper, shells, mica and flint widely."],
+ trap:"Aztecs = <b>markets/currency/tribute</b>. Inca = <b>roads/state-run redistribution/mit'a</b>.",
+ hook:"Aztec market, Inca road.",
+ cards:[["What was used as currency in Aztec markets?","Cacao beans."],["What were pochteca?","Professional long-distance Aztec merchants."],["How did the Inca organize their economy?","State-controlled redistribution with labor tax (mit'a) and extensive roads, not market trade."]]},
+
+{id:"mongols",ch:10,title:"Reasons for the success of the Mongol Empire",gist:"Cavalry, discipline, mobility, tolerance, Pax Mongolica",
+ lead:"Genghis Khan (Temujin) united the steppe tribes in 1206. The Mongols built the largest land empire in history.",
+ facts:[
+  "<b>Horse-archer cavalry:</b> composite bows, extreme mobility, supply lines light enough to travel quickly.",
+  "<b>Discipline and organization:</b> army organized in decimal units (10, 100, 1,000, 10,000) with promotion by <b>merit, not birth</b>, loyalty to the Khan.",
+  "<b>Psychological warfare:</b> cities that surrendered were spared; those that resisted were destroyed.",
+  "<b>Adapted technology:</b> hired Chinese and Persian engineers for siege weapons, gunpowder.",
+  "<b>Yam:</b> relay system of riders and stations for fast communication.",
+  "<b>Religious tolerance</b> and ruling through local administrators. Divided enemies.",
+  "<b>Pax Mongolica:</b> stable Eurasian trade (Silk Road) once the empire was established. Marco Polo traveled in this era.",
+  "Khanates: <b>Yuan</b> (China, Kublai Khan), <b>Ilkhanate</b> (Persia), <b>Golden Horde</b> (Russia), <b>Chagatai</b>. Baghdad fell in 1258."],
+ trap:"Mongol success was <b>military + organization</b>, not a superior religion or huge population. The Mongols were stopped by the Mamluks at <b>Ain Jalut (1260)</b>.",
+ hook:"Speed, Skill, Structure, Shock.",
+ cards:[["What was the Mongols' main military advantage?","Highly mobile mounted archers with composite bows and strict discipline."],["What was the yam?","The Mongol relay messenger and post system."],["What is the Pax Mongolica?","A period of safe trade and travel across Eurasia under Mongol rule."]]},
+
+/* ===== CHAPTER 11 ===== */
+{id:"plague",ch:11,title:"Effects of the bubonic plague in Europe",gist:"Black Death 1347–51: labor shortage, end of serfdom",
+ lead:"The Black Death reached Europe in 1347 via trade ships and killed roughly one-third or more of the population.",
+ facts:[
+  "Spread from Asia along <b>Mongol and Silk Road trade routes</b>, reaching Sicily by <b>Genoese ships</b> in 1347. Caused by <b>fleas on rats</b> (Yersinia pestis).",
+  "<b>Labor shortage:</b> workers could demand <b>higher wages</b>; many serfs left manors. <b>Manorialism and serfdom declined.</b>",
+  "<b>Peasant revolts</b> (Jacquerie 1358 in France; Peasants' Revolt 1381 in England).",
+  "<b>Church's authority weakened:</b> prayers did not stop the plague; many priests died; criticism grew.",
+  "<b>Scapegoating:</b> Jewish communities were persecuted. Some groups (flagellants) whipped themselves.",
+  "Fear of death shaped art and thought; towns and trade were disrupted, but survivors often gained better lives."],
+ trap:"The big economic effect is a <b>labor shortage that raised wages and weakened serfdom</b>, not population growth.",
+ hook:"Fewer workers = more pay = freer peasants.",
+ cards:[["What was the main economic effect of the Black Death in Europe?","Severe labor shortage, higher wages, and the decline of serfdom/manorialism."],["How did the plague reach Europe?","By trade routes (Silk Road/Mongol lands) and Genoese ships landing in Sicily in 1347."],["How did the plague affect the Church?","Weakened its authority and prestige because it couldn't stop the deaths."]]},
+
+{id:"fragment",ch:11,title:"Reasons for political fragmentation in Europe",gist:"No strong center: feudalism, wars, rival popes",
+ lead:"Europe was divided among many competing rulers and no empire could unify it again after Rome.",
+ facts:[
+  "<b>Feudalism</b> spread power among local lords and kings.",
+  "<b>Hundred Years' War (1337–1453)</b> between England and France drained resources.",
+  "<b>Holy Roman Empire:</b> a loose collection of hundreds of German and Italian states; emperors were weak.",
+  "<b>Italy</b> was split into city-states (Florence, Venice, Milan, Papal States, Naples).",
+  "<b>Church disputes:</b> Avignon papacy (1309–77) and the <b>Great Western Schism</b> (1378–1417) with rival popes.",
+  "<b>Black Death</b> and peasant revolts weakened old systems.",
+  "Language, geography (mountains, rivers) and distinct cultures also divided Europe.",
+  "Meanwhile England, France and Spain slowly built <b>stronger central monarchies</b>."],
+ trap:"Compare: <b>France, England, Spain centralized</b>; <b>Germany and Italy stayed fragmented</b> (until the 1800s).",
+ hook:"Feudal lords, long wars, loose HRE, rival popes.",
+ cards:[["Which regions stayed politically fragmented longest?","Germany (Holy Roman Empire) and Italy."],["Name two causes of European fragmentation.","Feudalism, Hundred Years' War, weak Holy Roman Empire, church schisms, geography."],["What was the Great Western Schism?","1378–1417, when rival popes claimed leadership of the Catholic Church."]]},
+
+{id:"ottomanregion",ch:11,title:"Ottoman stance on regional differences",gist:"Millet system: tolerance for religious communities",
+ lead:"The Ottomans (founded c. 1299; captured Constantinople in 1453) ruled a multi-religious, multi-ethnic empire by letting communities govern themselves.",
+ facts:[
+  "<b>Millet system:</b> Christians, Jews and others formed self-governing religious communities with their own leaders, courts and laws.",
+  "Non-Muslims paid the <b>jizya</b> tax but kept their faith.",
+  "<b>Devshirme:</b> Christian boys were taken, converted and trained as <b>Janissaries</b> or administrators.",
+  "Sultans such as <b>Mehmed II</b> and <b>Suleiman the Magnificent</b> allowed diversity as a way to keep order and income.",
+  "After 1492, the Ottomans <b>welcomed Jews</b> expelled from Spain.",
+  "Sunni Islam was the state religion but different religions were accommodated."],
+ trap:"“Ottomans forced everyone to convert” is wrong. Answer: <b>tolerant, with tax and self-rule (millets)</b>.",
+ hook:"Millet = a religious community that runs itself.",
+ cards:[["What was the millet system?","Self-governing religious communities within the Ottoman Empire with their own laws and leaders."],["What was the devshirme?","Taking Christian boys to be converted and trained as Janissaries or officials."],["Who welcomed Jews expelled from Spain in 1492?","The Ottoman Empire."]]},
+
+{id:"joan",ch:11,title:"Importance of Joan of Arc",gist:"Turned the Hundred Years' War, French nationalism",
+ lead:"Joan of Arc (c. 1412–1431) was a peasant girl who said saints told her to save France.",
+ facts:[
+  "Hundred Years' War: France was nearly conquered by England and Burgundy.",
+  "She convinced Dauphin <b>Charles VII</b> to give her troops and led them to lift the siege of <b>Orléans (1429)</b>.",
+  "She escorted Charles to be crowned at <b>Reims</b>, making him a legitimate king.",
+  "Captured by Burgundians, sold to the English, tried for heresy and <b>burned at the stake in Rouen in 1431</b> (about age 19).",
+  "Her victories lifted French morale and helped France win by <b>1453</b>.",
+  "Became a symbol of <b>French national identity</b>; canonized a saint in 1920."],
+ trap:"She was <b>French</b> and fought <b>against the English</b>. Key battle: <b>Orléans</b>.",
+ hook:"Orléans 1429, Reims coronation, Rouen 1431.",
+ cards:[["What did Joan of Arc accomplish?","Lifted the siege of Orléans (1429) and helped Charles VII be crowned, turning the war toward France."],["How did Joan of Arc die?","Burned at the stake for heresy in Rouen, 1431."],["Why is she important to France?","A symbol of French national unity and resistance."]]},
+
+{id:"spainottoman",ch:11,title:"Spain's reaction to Ottoman expansion",gist:"Lepanto 1571 and the search for new routes",
+ lead:"Ottoman power in the Mediterranean and control of Constantinople (1453) pushed Spain and other Christian powers to respond.",
+ facts:[
+  "<b>Military response:</b> Spain led the <b>Holy League</b> that defeated the Ottoman navy at the <b>Battle of Lepanto (1571)</b>.",
+  "<b>Economic response:</b> with Ottomans controlling eastern routes, Europeans looked for <b>new sea routes to Asia</b>. Spain backed <b>Columbus (1492)</b>; Portugal explored around Africa.",
+  "Spain's own <b>Reconquista</b> ended with Granada in <b>1492</b>, and its rulers <b>Ferdinand and Isabella</b> promoted a strongly Catholic state.",
+  "Spain and the Habsburgs treated the Ottomans as a major rival in the Mediterranean."],
+ trap:"If one answer says <b>Lepanto</b> or <b>searching for new trade routes</b>, that is likely correct. Spain did not ally with the Ottomans.",
+ hook:"Ottomans block the east → Spain sails west.",
+ cards:[["What was the Battle of Lepanto?","1571 naval victory by Spain-led Holy League over the Ottomans."],["How did Ottoman expansion help spur exploration?","It blocked or taxed Europe's eastern trade routes, so Europeans sought sea routes to Asia."],["What happened in Spain in 1492?","Granada fell (end of Reconquista) and Columbus sailed."]]},
+
+{id:"easternchurch",ch:11,title:"Eastern Christian Church's response to challenges of authority",gist:"Orthodoxy under Ottomans; Moscow as Third Rome",
+ lead:"The Eastern (Orthodox) Church faced crises: loss of Byzantine imperial protection and Muslim rule.",
+ facts:[
+  "Before 1453 the Byzantine emperor protected the church. When the Ottomans took <b>Constantinople (1453)</b> the church lost its emperor.",
+  "Some sought help from the West: the <b>Council of Florence (1439)</b> tried to reunite with Rome, but many Orthodox rejected it.",
+  "Under the Ottomans, the <b>Patriarch of Constantinople</b> kept authority over Orthodox Christians in the <b>millet system</b>.",
+  "In <b>Russia</b>, Moscow's rulers (Ivan III) claimed to be the heirs of Byzantium: <b>“Moscow, the Third Rome.”</b> The Russian Orthodox Church grew in strength.",
+  "The Orthodox Church kept its own traditions rather than accept papal authority."],
+ trap:"The Orthodox Church <b>survived by keeping its identity</b>: under the Ottomans and by leadership shifting to Russia.",
+ hook:"Rome → Constantinople → Moscow (Third Rome).",
+ cards:[["What happened to the Orthodox Church after 1453?","It continued under Ottoman rule through the millet system, led by the Patriarch of Constantinople."],["What does “Third Rome” mean?","Russia (Moscow) saw itself as the successor of Rome and Constantinople as the center of Orthodoxy."],["Did most Orthodox accept reunion with Rome at Florence?","No, many rejected it."]]},
+
+{id:"renaissance",ch:11,title:"Characteristics of the Renaissance and humanism",gist:"Rebirth in Italy; individual, classical learning, realism",
+ lead:"The Renaissance (“rebirth,” c. 1300–1600) began in Italy and revived classical Greek and Roman culture.",
+ facts:[
+  "<b>Why Italy?</b> Wealthy trading city-states (Florence, Venice) with rich patrons like the <b>Medici</b>, plus ancient Roman ruins and Greek scholars arriving after 1453.",
+  "<b>Humanism:</b> emphasis on human potential, achievement and the study of classical texts, while staying largely Christian.",
+  "<b>Key humanists:</b> <b>Petrarch</b> (“father of humanism”), <b>Machiavelli</b> (<i>The Prince</i>), <b>Castiglione</b>. Northern: <b>Erasmus</b> (<i>Praise of Folly</i>), <b>Thomas More</b> (<i>Utopia</i>).",
+  "<b>Art:</b> realism, <b>linear perspective</b>, anatomy and individual portraits. Artists: <b>Leonardo da Vinci</b>, <b>Michelangelo</b>, <b>Raphael</b>.",
+  "<b>Characteristics:</b> individualism, secular interests, patronage, writing in vernacular languages (<b>Dante</b>), the “Renaissance man.”",
+  "Spread north to England, France, the Netherlands, Germany (Shakespeare, Bruegel)."],
+ trap:"Humanism ≠ rejecting religion. It focused on <b>human potential and classical learning</b>.",
+ hook:"Rebirth of Rome, Rise of the individual.",
+ cards:[["What is humanism?","An intellectual movement stressing human potential and classical texts."],["Why did the Renaissance begin in Italy?","Wealthy trade cities, patrons like the Medici, classical heritage, and Greek scholars."],["Name three Renaissance artists.","Leonardo da Vinci, Michelangelo, Raphael."]]},
+
+{id:"press",ch:11,title:"Influences of the printing press",gist:"Gutenberg c. 1450: ideas spread fast",
+ lead:"Johannes Gutenberg of Mainz, Germany, developed a movable-type press around 1450, printing the Gutenberg Bible about 1455.",
+ facts:[
+  "Books became <b>cheaper and faster</b> to produce than hand-copied manuscripts.",
+  "<b>Literacy and education</b> expanded.",
+  "Spread Renaissance humanism, scientific works and maps across Europe.",
+  "Powered the <b>Protestant Reformation</b>: Luther's <b>95 Theses (1517)</b> and Bible translations spread quickly.",
+  "Encouraged <b>vernacular languages</b> and national identity.",
+  "Weakened Church control of information; supported the <b>Scientific Revolution</b>.",
+  "Earlier precedents: Chinese <b>woodblock printing</b> and <b>Bi Sheng's movable type</b> (1040s); Korean metal type (1377)."],
+ trap:"Gutenberg = <b>Europe's movable-type press</b>; he didn't invent printing itself.",
+ hook:"Press → ideas travel → Reformation and science.",
+ cards:[["Who developed the movable-type printing press in Europe?","Johannes Gutenberg, around 1450 in Mainz."],["Name two effects of the printing press.","More literacy, spread of Renaissance and Reformation ideas, standardized vernacular languages."],["Which religious movement spread thanks to printing?","The Protestant Reformation."]]},
+
+{id:"mingview",ch:11,title:"View of Ming on overseas expansion",gist:"Yongle yes, later emperors no; inward focus",
+ lead:"The Ming dynasty (1368–1644) expelled the Mongols and restored Chinese rule.",
+ facts:[
+  "Founder <b>Hongwu</b> focused on rebuilding China and restricted private overseas trade.",
+  "<b>Yongle</b> (3rd emperor) moved the capital to <b>Beijing</b>, built the Forbidden City, and sponsored <b>Zheng He's voyages</b>.",
+  "After Yongle, <b>Confucian officials</b> saw the voyages as <b>costly and unnecessary</b> and disliked merchants and eunuchs (Zheng He was a eunuch).",
+  "The main threat was the <b>Mongols in the north</b>, so money went to the Great Wall and defense.",
+  "<b>1433:</b> voyages ended; the Ming <b>banned</b> large ocean ships and restricted overseas trade.",
+  "The Ming saw China as the <b>“Middle Kingdom”</b> that needed little from foreigners, so they turned <b>inward</b>."],
+ trap:"The Ming <b>stopped</b> expansion after Zheng He, so they were <b>not</b> colonizers like the Portuguese and Spanish.",
+ hook:"After Yongle, the ships stayed home.",
+ cards:[["What did the Ming government think of overseas expansion after Yongle?","They considered it expensive and unnecessary and stopped it, focusing on defense and Confucian values."],["Which Ming emperor sponsored Zheng He?","Yongle."],["When did the voyages end?","1433."]]},
+
+{id:"zhenghe",ch:11,title:"Goals of Zheng He's voyages",gist:"Show power, collect tribute, expand diplomacy and trade",
+ lead:"Between 1405 and 1433 Admiral Zheng He, a Muslim eunuch, led seven voyages with huge fleets.",
+ facts:[
+  "<b>Fleet:</b> 60+ treasure ships and more than <b>27,000 men</b> (the largest ships were far bigger than Columbus's).",
+  "<b>Route:</b> Southeast Asia, India (Calicut), the Persian Gulf (Hormuz), Arabia and East Africa (Mogadishu, Malindi).",
+  "<b>Goals:</b> show off Ming <b>power and prestige</b>; set up <b>tribute</b> relationships where rulers acknowledged the Chinese emperor; expand trade; make diplomatic ties; suppress piracy.",
+  "<b>Not</b> about conquest or colonizing, and not primarily religious conversion.",
+  "Brought home exotic items (like <b>giraffes</b>) and envoys; gave silk and porcelain.",
+  "<b>Contrast:</b> Portuguese explorers a bit later (e.g. da Gama 1498) came with smaller ships and sought to build forts and spread Christianity."],
+ trap:"Zheng He = <b>show power, tribute, trade</b>, peaceful. Not colonies, not religious missions.",
+ hook:"Treasure ships, tribute, 1405–1433.",
+ cards:[["What were the main goals of Zheng He's voyages?","Display Ming power, collect tribute, expand diplomacy and trade."],["How many voyages did Zheng He make and when?","Seven voyages from 1405 to 1433."],["How did Zheng He differ from later European explorers?","He was largely peaceful, didn't try to colonize or convert, and led far bigger fleets."]]}
+];
+
+/* Quiz: [chapter, question, CORRECT answer, [three wrong answers], explanation] */
+const QUIZ = [
+[9,"The Hijra, Muhammad's journey in 622, was a move from:","Mecca to Medina",["Medina to Mecca","Damascus to Baghdad","Jerusalem to Mecca"],"The Hijra (622) was the move from Mecca to Medina and marks year 1 of the Islamic calendar."],
+[9,"According to Islam, Muhammad received revelations through:","The angel Gabriel",["The caliph","A council of scholars","The Kaaba"],"Muslims believe God revealed the Quran to Muhammad through Gabriel."],
+[9,"Which is one of the Five Pillars of Islam?","Fasting during Ramadan",["Building a mosque in each city","Paying the jizya","Following the caliph"],"The Five Pillars: shahada, prayer, zakat, fasting in Ramadan, hajj."],
+[9,"The Abbasid caliphate's capital was:","Baghdad",["Damascus","Cairo","Cordoba"],"The Abbasids founded Baghdad in 762. The Umayyads ruled from Damascus."],
+[9,"The House of Wisdom in Baghdad was best known for:","Translating and preserving Greek, Persian and Indian knowledge",["Training Abbasid soldiers","Printing Quran copies","Collecting jizya"],"It was a center of translation and scholarship."],
+[9,"Which of the following was a contribution of the Abbasid Golden Age?","Advances in algebra and medicine",["The invention of the printing press","Creation of feudalism","The three-field system"],"Al-Khwarizmi (algebra) and Ibn Sina (medicine) are examples."],
+[9,"The main cause of the Sunni–Shia split was a disagreement over:","Who should lead the Muslim community after Muhammad",["Whether to make the hajj","The language of the Quran","Whether to trade with Europeans"],"Sunnis favored an elected caliph; Shia backed Ali and his descendants."],
+[9,"Shia Muslims believe leadership should have passed to:","Ali and his descendants",["Abu Bakr","The Umayyad family","The most learned scholar"],"Ali was Muhammad's cousin and son-in-law."],
+[9,"The 680 Battle of Karbala is important to Shia Muslims because:","Husayn, Ali's son, was killed there",["Muhammad died there","Mecca was captured there","The Quran was compiled there"],"Husayn's death became the central martyrdom of Shia Islam."],
+[9,"Why did many conquered people in Muslim lands convert to Islam?","Converts avoided the jizya and gained social and legal advantages",["They were forced to by the army in all cases","Christianity was banned","They wanted to travel to Mecca"],"Tax relief and status plus tolerance of People of the Book made conversion attractive."],
+[9,"Islam spread to the Swahili Coast mainly through:","Indian Ocean trade",["Military conquest by the Abbasids","Missionaries from China","The Silk Road"],"Muslim merchants rode the monsoon winds; Swahili city-states like Kilwa grew."],
+[9,"Which describes how Islam reached sub-Saharan West Africa?","Through Muslim merchants on trans-Saharan trade routes",["By large Arab armies","By Viking traders","Through Mongol conquest"],"Peaceful trade and conversion of rulers were key."],
+[9,"Tang dynasty civil service exams were intended to:","Choose officials by merit based on Confucian learning",["Favor military leaders","Protect the nobility","Teach Buddhism"],"They reduced aristocratic power and built an educated bureaucracy."],
+[9,"Tang exam candidates mainly studied:","The Confucian classics",["Buddhist sutras","The Quran","Military tactics"],"Confucian classics were the core."],
+[9,"Emperor Wuzong persecuted Buddhism in 845 mostly because:","Monasteries were wealthy, tax-exempt and seen as foreign",["Buddhists rebelled against Islam","Buddhism was unpopular with peasants","Muslims forced him"],"Economic and Confucian/Daoist pressures drove the persecution."],
+[9,"The Battle of Talas River (751) led to:","Abbasid victory over the Tang and Muslim control of Central Asia",["A Tang conquest of Baghdad","Mongol rule of China","The end of the Silk Road"],"Papermaking also spread west after this battle."],
+[9,"Charlemagne was crowned emperor by the pope in the year:","800",["476","732","1054"],"Pope Leo III crowned him on Christmas Day, 800."],
+[9,"The Carolingian Renaissance refers to:","A revival of learning under Charlemagne",["A revolt by Charlemagne's nobles","The Viking invasions","The split with the East"],"Schools, manuscripts and scholars like Alcuin."],
+[9,"In the early Middle Ages the institution that best unified Western Europe was:","The Catholic Church",["The Roman Senate","The Holy Roman Emperor alone","The Byzantine Empire"],"The Church shared a language, faith and authority across kingdoms."],
+[9,"Monasteries in the Middle Ages were important because they:","Preserved learning by copying manuscripts and running schools",["Trained knights","Collected royal taxes","Ruled the cities"],"Monks kept classical and religious works alive."],
+[9,"The most important Viking technological advantage was the:","Shallow-draft longship",["Stirrup","Heavy plow","Compass"],"Longships could cross oceans and sail up rivers."],
+[9,"Which Viking leader reached North America around the year 1000?","Leif Erikson",["Rollo","Harald Hardrada","Erik the Red (Greenland only)"],"Leif Erikson reached Vinland. Erik the Red settled Greenland."],
+[9,"The Great Schism of 1054 divided Christianity into:","Roman Catholic and Eastern Orthodox",["Catholic and Protestant","Sunni and Shia","Orthodox and Coptic"],"The Protestant Reformation came in 1517."],
+[9,"Which was a cause of the East-West Christian split?","The pope's claim of authority over the Eastern patriarchs",["The Crusades","The Black Death","Luther's theses"],"Authority, language, icons and doctrine all divided Rome and Constantinople."],
+
+[10,"Which tool improved ocean navigation by showing direction?","The magnetic compass",["The longbow","The heavy plow","The quipu"],"The compass came from China."],
+[10,"The lateen sail allowed ships to:","Sail across or into the wind",["Carry more cargo only","Cross deserts","Travel without a crew"],"The triangular sail was used on Arab dhows."],
+[10,"Chinese junks were innovative because they had:","Watertight compartments and stern-post rudders",["Oars only","No masts","Gunpowder cannons"],"Junks were large, sturdy trade ships."],
+[10,"In feudalism, a vassal received a fief in return for:","Military service and loyalty",["Rent in cash","Growing crops only","Tribute"],"Fief = land; vassal = loyal fighter."],
+[10,"Manorialism was primarily an:","Economic system based on self-sufficient estates worked by serfs",["Political system of kings and emperors","Religious system","Military system of knights"],"Feudalism is political-military; manorialism is economic."],
+[10,"A medieval serf was:","Tied to the land and owed labor to the lord",["A free landowner","A paid soldier","A merchant"],"Serfs were not slaves but could not leave the manor freely."],
+[10,"Mansa Musa is best known for:","His lavish hajj to Mecca that displayed Mali's gold",["Conquering Spain","Founding Ghana","Building Great Zimbabwe"],"His 1324–25 hajj made Mali famous."],
+[10,"One effect of Mansa Musa's hajj was:","Gold's value fell in Cairo",["Cairo's gold rose in value","Mali lost power","Mecca closed to foreigners"],"He gave away so much gold that prices rose and gold's value dropped."],
+[10,"Timbuktu was important as a:","Trade hub and center of Islamic scholarship",["Viking port","Capital of Ghana","Mongol camp"],"It was a Niger-Sahara crossroads with Sankore and large libraries."],
+[10,"The classic trans-Saharan trade exchanged:","Gold for salt",["Silk for spices","Ivory for porcelain","Cacao for jade"],"Salt came from the Sahara; gold from West Africa."],
+[10,"Aztec merchants who traveled long distances were called:","Pochteca",["Quipu","Janissaries","Mit'a"],"Pochteca were professional merchants and sometimes spies."],
+[10,"Which was used as currency in Aztec markets?","Cacao beans",["Gold coins","Silver coins","Cowrie shells"],"Cacao beans served as money."],
+[10,"The Inca economy was organized mainly through:","State-controlled labor tax (mit'a) and redistribution",["Large private markets","Merchant guilds","Coin money"],"Roads and quipu linked the empire."],
+[10,"A key reason for Mongol military success was:","Highly mobile mounted archers with strict discipline",["Huge infantry armies","Superior ships","Advanced gunpowder weapons"],"Speed, skill and organization."],
+[10,"The Mongol yam was a:","Relay communication and messenger system",["Type of tent","Siege weapon","Law code"],"It let messages travel quickly across the empire."],
+[10,"The Pax Mongolica refers to:","Safe trade and travel across Eurasia under Mongol rule",["The peace treaty with Japan","The conquest of Baghdad","A Mongol law code"],"It helped the Silk Road thrive, and also spread the plague."],
+
+[11,"A major economic result of the Black Death in Europe was:","A labor shortage that raised wages and weakened serfdom",["More workers and lower wages","A strengthening of manorialism","A drop in trade prices only"],"Workers had more bargaining power."],
+[11,"The Black Death reached Europe in 1347 mostly via:","Trade ships and routes from Asia",["Viking raids","The Crusades","Spanish colonization"],"Genoese ships carried it to Sicily."],
+[11,"Compared with France and England, Germany and Italy:","Remained politically fragmented",["Became centralized first","Were ruled by one king","Were united by the Ottomans"],"The Holy Roman Empire and Italian city-states stayed divided."],
+[11,"The Great Western Schism (1378–1417) was:","A period with rival popes",["A split between Orthodox and Catholic churches","A Protestant revolt","A Crusade"],"It weakened papal authority."],
+[11,"The Ottoman millet system:","Allowed religious communities to govern themselves under their own laws",["Forced conversion","Banned non-Muslims","Placed all power in local nobles"],"Non-Muslims paid the jizya but had self-rule."],
+[11,"Joan of Arc is most remembered for:","Helping France win at Orléans and rallying French nationalism",["Leading the English army","Founding a new church","Ending the plague"],"She lifted the siege of Orléans in 1429."],
+[11,"Spain's key military response to Ottoman naval power was:","The Holy League victory at Lepanto (1571)",["The conquest of Constantinople","An alliance with the Ottomans","Withdrawing from the Mediterranean"],"Spain led the Holy League at Lepanto."],
+[11,"The Ottoman capture of Constantinople (1453) encouraged Europeans to:","Seek new sea routes to Asia",["Stop trading","Abandon Christianity","Close their ports"],"Spain and Portugal explored by sea."],
+[11,"After Constantinople fell, the Orthodox Church:","Continued under the Patriarch within the Ottoman millet system",["Accepted the pope's authority","Disappeared","Was replaced by Islam"],"Russia later claimed to be the “Third Rome.”"],
+[11,"The Renaissance began in:","Italian city-states",["England","Spain","The Holy Roman Empire's capital"],"Wealthy cities and patrons like the Medici helped."],
+[11,"Humanism emphasized:","Human potential and classical learning",["Rejecting all religion","Absolute monarchy","Medieval scholasticism"],"Humanists studied Greek and Roman works."],
+[11,"Who wrote The Prince, a work about political power?","Machiavelli",["Petrarch","Erasmus","Dante"],"Machiavelli was a Renaissance political thinker."],
+[11,"Johannes Gutenberg is associated with:","Movable-type printing in Europe",["Gunpowder","The compass","Humanism"],"His press (c. 1450) lowered book costs."],
+[11,"One consequence of the printing press was:","Faster spread of Reformation and Renaissance ideas",["Reduced literacy","Stronger Church control of information","End of vernacular languages"],"Books became cheaper and more available."],
+[11,"After Yongle, Ming officials generally viewed overseas expansion as:","Costly and unnecessary",["A path to colonies","A religious duty","A military need"],"Confucian officials focused inward and on northern defense."],
+[11,"Zheng He's voyages mainly aimed to:","Show Ming power and gain tribute and trade",["Conquer territory","Convert people to Buddhism","Find a route to Europe"],"They were largely peaceful and diplomatic."],
+[11,"Which statement about Zheng He is true?","He led seven voyages with huge fleets between 1405 and 1433",["He founded the Ming dynasty","He colonized East Africa","He sailed to the Americas"],"Voyages ended after Yongle's death."]
+];
+
+const TIMELINE = [
+ [570,"Muhammad born in Mecca (approx.)",9],[610,"First revelation (approx.)",9],[618,"Tang dynasty begins",9],[622,"Hijra: Mecca to Medina",9],
+ [632,"Muhammad dies; succession dispute begins",9],[661,"Ali assassinated; Umayyads rule",9],[680,"Battle of Karbala (Husayn killed)",9],
+ [711,"Muslim armies enter Spain",9],[732,"Battle of Tours stops Muslim advance in France",9],[750,"Abbasids overthrow the Umayyads",9],
+ [751,"Battle of Talas River (Abbasids beat Tang)",9],[762,"Baghdad founded",9],[793,"Vikings raid Lindisfarne",9],[800,"Charlemagne crowned emperor",9],
+ [843,"Treaty of Verdun splits Carolingian Empire",9],[845,"Wuzong persecutes Buddhism",9],[907,"Tang dynasty falls",9],[1054,"Great Schism",9],
+ [1206,"Genghis Khan unites the Mongols",10],[1235,"Sundiata founds Mali (approx.)",10],[1258,"Mongols sack Baghdad",10],[1260,"Mamluks stop Mongols at Ain Jalut",10],
+ [1324,"Mansa Musa's hajj",10],[1337,"Hundred Years' War begins",11],[1347,"Black Death reaches Europe",11],[1368,"Ming dynasty founded",11],
+ [1378,"Great Western Schism begins",11],[1405,"Zheng He's first voyage",11],[1429,"Joan of Arc lifts siege of Orléans",11],[1431,"Joan of Arc executed",11],
+ [1433,"Last Zheng He voyage; Ming turns inward",11],[1450,"Gutenberg's movable-type press (approx.)",11],[1453,"Ottomans take Constantinople; Hundred Years' War ends",11],
+ [1492,"Granada falls; Columbus sails",11],[1571,"Battle of Lepanto",11]
+];
+
+const TOP = [
+ "Hijra (622) = Muhammad's move from Mecca to Medina. Starts the Islamic calendar.",
+ "Sunni–Shia split = who should succeed Muhammad. Shia back Ali; Karbala (680) killed Husayn.",
+ "Abbasids ruled from Baghdad; House of Wisdom translated Greek, Persian and Indian works; algebra and medicine advanced.",
+ "Islam spread by conquest, tax incentives (jizya) for converts, trade, Sufis, and Arabic. In sub-Saharan Africa mainly by trade.",
+ "Tang exams = merit-based officials (Confucian classics). Wuzong (845) crushed Buddhism for wealth and as a “foreign” religion.",
+ "Talas (751): Abbasids defeated Tang; papermaking went west.",
+ "Charlemagne: crowned emperor 800 by the pope; Carolingian Renaissance.",
+ "Church = unifying institution; Great Schism 1054 = Catholic vs. Orthodox.",
+ "Vikings = longships (shallow draft, ocean + river). Leif Erikson reached Vinland.",
+ "Feudalism = land for military service (lord/vassal). Manorialism = land worked by serfs (economic).",
+ "Mansa Musa (Mali) hajj 1324: gold, Cairo, mosques, fame. Timbuktu = trade + learning. Gold for salt.",
+ "Aztec: pochteca, cacao beans as money. Inca: roads, mit'a, no market economy.",
+ "Mongols: mounted archers, discipline, yam, tolerance, Pax Mongolica.",
+ "Black Death (1347): labor shortage, higher wages, end of serfdom, weakened Church.",
+ "Ottomans: millet system (tolerance with jizya). Constantinople fell 1453. Spain won at Lepanto (1571) and sought sea routes.",
+ "Renaissance: began in Italy; humanism; Gutenberg's press (~1450) spread ideas. Ming ended Zheng He voyages (1433) as costly; his goal = prestige, tribute, trade."
+];
+
+/* ---------- STATE / STORAGE ---------- */
+const KEY="exam3-guide-v1";
+let S={learned:{},known:{},best:null,theme:null};
+function load(){try{const r=localStorage.getItem(KEY);if(r)S=Object.assign(S,JSON.parse(r));}catch(e){}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
+load();
+
+/* ---------- HELPERS ---------- */
+const $=(s,r=document)=>r.querySelector(s);
+const $$=(s,r=document)=>Array.from(r.querySelectorAll(s));
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+
+/* ---------- THEME ---------- */
+function applyTheme(){if(S.theme)document.documentElement.setAttribute("data-theme",S.theme);else document.documentElement.removeAttribute("data-theme");}
+$("#themeBtn").addEventListener("click",()=>{
+  const dark=S.theme?S.theme==="dark":window.matchMedia("(prefers-color-scheme: dark)").matches;
+  S.theme=dark?"light":"dark";save();applyTheme();
+});
+applyTheme();
+
+/* ---------- TABS ---------- */
+function showView(v){
+  $$("nav.tabs button").forEach(b=>b.setAttribute("aria-selected",b.dataset.view===v));
+  $$(".view").forEach(s=>s.hidden=s.id!=="view-"+v);
+  window.scrollTo({top:0});
+}
+$$("nav.tabs button").forEach(b=>b.addEventListener("click",()=>showView(b.dataset.view)));
+
+/* ---------- PROGRESS ---------- */
+function updateProgress(){
+  const total=TOPICS.length,done=TOPICS.filter(t=>S.learned[t.id]).length;
+  const pct=Math.round(done/total*100);
+  $("#pText").textContent=done+" of "+total+" topics learned";
+  $("#pPct").textContent=pct+"%";
+  $("#pFill").style.width=pct+"%";
+  [9,10,11].forEach(c=>{
+    const all=TOPICS.filter(t=>t.ch===c),d=all.filter(t=>S.learned[t.id]).length;
+    $("#c"+c+"p").textContent="Ch "+c+": "+d+"/"+all.length;
+  });
+}
+
+/* ---------- STUDY VIEW ---------- */
+let chFilter="all",query="";
+function renderTopics(){
+  const list=$("#topicList");let html="";let any=false;
+  [9,10,11].forEach(c=>{
+    if(chFilter!=="all"&&String(c)!==chFilter)return;
+    const items=TOPICS.filter(t=>t.ch===c).filter(t=>{
+      if(!query)return true;
+      const hay=(t.title+" "+t.gist+" "+t.lead+" "+t.facts.join(" ")+" "+t.trap+" "+t.hook).replace(/<[^>]+>/g,"").toLowerCase();
+      return hay.includes(query);
+    });
+    if(!items.length)return;any=true;
+    html+='<div class="ch'+c+'"><div class="chhead"><h2>'+CHAPTERS[c]+'</h2></div>';
+    items.forEach(t=>{
+      html+='<details class="topic ch'+c+(S.learned[t.id]?" done":"")+'" id="t-'+t.id+'"'+(query?" open":"")+'>'
+       +'<summary><span class="tick" aria-hidden="true"></span><span><span class="tt">'+t.title+'</span><span class="gist">'+t.gist+'</span></span><span class="caret" aria-hidden="true">&#9656;</span></summary>'
+       +'<div class="body"><p class="lead">'+t.lead+'</p><ul>'+t.facts.map(f=>"<li>"+f+"</li>").join("")+'</ul>'
+       +'<div class="trap"><strong>Likely test trap.</strong> '+t.trap+'</div>'
+       +'<div class="hook"><strong>Memory hook.</strong> '+t.hook+'</div>'
+       +'<button class="btn learn" type="button" data-id="'+t.id+'">'+(S.learned[t.id]?"Learned (tap to undo)":"Mark as learned")+'</button></div></details>';
+    });
+    html+="</div>";
+  });
+  list.innerHTML=any?html:'<p class="empty">No topics match that search. Try a different word.</p>';
+}
+$("#topicList").addEventListener("click",e=>{
+  const b=e.target.closest(".learn");if(!b)return;
+  const id=b.dataset.id;S.learned[id]=!S.learned[id];if(!S.learned[id])delete S.learned[id];
+  save();updateProgress();
+  const d=b.closest("details");d.classList.toggle("done",!!S.learned[id]);
+  b.textContent=S.learned[id]?"Learned (tap to undo)":"Mark as learned";
+});
+$("#search").addEventListener("input",e=>{query=e.target.value.trim().toLowerCase();renderTopics();});
+$("#chFilter").addEventListener("click",e=>{
+  const b=e.target.closest("button");if(!b)return;
+  chFilter=b.dataset.ch;$$("#chFilter button").forEach(x=>x.setAttribute("aria-pressed",x===b));renderTopics();
+});
+
+/* ---------- FLASHCARDS ---------- */
+let cardCh="all",deck=[],ci=0,flipped=false;
+function buildDeck(){
+  let cards=[];
+  TOPICS.forEach(t=>t.cards.forEach((c,i)=>cards.push({id:t.id+"-"+i,ch:t.ch,topic:t.title,q:c[0],a:c[1]})));
+  if(cardCh!=="all")cards=cards.filter(c=>String(c.ch)===cardCh);
+  if($("#hideKnown").checked)cards=cards.filter(c=>!S.known[c.id]);
+  deck=cards;ci=0;flipped=false;renderCard();
+}
+function renderCard(){
+  const area=$("#cardArea");
+  if(!deck.length){area.innerHTML='<div class="panel"><h3>Deck complete</h3><p>You have marked every card here as known. Uncheck “Hide cards I already know” to review them again.</p></div>';return;}
+  if(ci>=deck.length)ci=0;
+  const c=deck[ci];
+  area.innerHTML='<div class="ch'+c.ch+'"><div class="fcount"><span>Card '+(ci+1)+' of '+deck.length+'</span><span>Known: '+Object.keys(S.known).length+'</span></div>'
+   +'<div class="card-scene"><button class="fcard'+(flipped?" flip":"")+'" id="fc" type="button" aria-label="Flip card">'
+   +'<div class="face"><small>Chapter '+c.ch+': '+c.topic+'</small><div class="q">'+c.q+'</div></div>'
+   +'<div class="face back"><small>Answer</small><div class="a">'+c.a+'</div></div></button></div>'
+   +'<p class="hint">Tap the card to flip it.</p>'
+   +'<div class="row" style="margin-top:12px"><button class="btn ghost" id="cStill" type="button">Still learning</button><button class="btn good" id="cKnow" type="button">I know it</button></div>'
+   +'<div class="row" style="margin-top:10px"><button class="btn ghost" id="cPrev" type="button">Back</button><button class="btn ghost" id="cShuf" type="button">Shuffle</button><button class="btn ghost" id="cReset" type="button">Reset known</button></div></div>';
+  $("#fc").addEventListener("click",()=>{flipped=!flipped;$("#fc").classList.toggle("flip",flipped);});
+  const next=()=>{flipped=false;ci=(ci+1)%deck.length;renderCard();};
+  $("#cStill").addEventListener("click",()=>{delete S.known[c.id];save();next();});
+  $("#cKnow").addEventListener("click",()=>{
+    S.known[c.id]=1;save();
+    if($("#hideKnown").checked){deck.splice(ci,1);flipped=false;renderCard();}else next();
+  });
+  $("#cPrev").addEventListener("click",()=>{flipped=false;ci=(ci-1+deck.length)%deck.length;renderCard();});
+  $("#cShuf").addEventListener("click",()=>{deck=shuffle(deck);ci=0;flipped=false;renderCard();});
+  $("#cReset").addEventListener("click",()=>{S.known={};save();buildDeck();});
+}
+$("#cardCh").addEventListener("click",e=>{
+  const b=e.target.closest("button");if(!b)return;
+  cardCh=b.dataset.ch;$$("#cardCh button").forEach(x=>x.setAttribute("aria-pressed",x===b));buildDeck();
+});
+$("#hideKnown").addEventListener("change",buildDeck);
+
+/* ---------- QUIZ ---------- */
+let Q={list:[],i:0,score:0,missed:[],done:false,chapter:"all",count:20};
+function quizSetup(){
+  const best=S.best?'<p class="sub" style="margin-bottom:6px">Best score so far: <strong>'+S.best+'%</strong></p>':"";
+  $("#quizArea").innerHTML='<div class="panel"><h2>Practice quiz</h2><p class="sub">'+QUIZ.length+' multiple choice questions in the style of your exam. Aim for 85% or higher.</p>'+best
+   +'<div class="field"><span>Chapter</span><div class="seg" id="qCh" role="group" aria-label="Quiz chapter"><button data-v="all" aria-pressed="true">All</button><button data-v="9" aria-pressed="false">Ch 9</button><button data-v="10" aria-pressed="false">Ch 10</button><button data-v="11" aria-pressed="false">Ch 11</button></div></div>'
+   +'<div class="field"><span>Number of questions</span><div class="seg" id="qN" role="group" aria-label="Question count"><button data-v="10" aria-pressed="false">10</button><button data-v="20" aria-pressed="true">20</button><button data-v="all" aria-pressed="false">All</button></div></div>'
+   +'<button class="btn" id="qStart" type="button" style="width:100%;margin-top:8px">Start quiz</button></div>';
+  Q.chapter="all";Q.count=20;
+  $("#qCh").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;Q.chapter=b.dataset.v;$$("#qCh button").forEach(x=>x.setAttribute("aria-pressed",x===b));});
+  $("#qN").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;Q.count=b.dataset.v;$$("#qN button").forEach(x=>x.setAttribute("aria-pressed",x===b));});
+  $("#qStart").addEventListener("click",()=>{
+    let pool=QUIZ.filter(q=>Q.chapter==="all"||String(q[0])===Q.chapter);
+    pool=shuffle(pool);if(Q.count!=="all")pool=pool.slice(0,Number(Q.count));
+    startQuiz(pool);
+  });
+}
+function startQuiz(pool){Q.list=pool;Q.i=0;Q.score=0;Q.missed=[];Q.done=false;showQ();}
+function showQ(){
+  if(Q.i>=Q.list.length)return showResult();
+  const q=Q.list[Q.i];
+  const opts=shuffle([q[2]].concat(q[3]));
+  const area=$("#quizArea");
+  area.innerHTML='<div class="panel ch'+q[0]+'"><div class="qmeta"><span>Question '+(Q.i+1)+' of '+Q.list.length+'</span><span>Chapter '+q[0]+'</span></div>'
+   +'<div class="pbar"><i style="width:'+Math.round(Q.i/Q.list.length*100)+'%"></i></div>'
+   +'<div class="qtext">'+q[1]+'</div><div id="opts"></div><div id="fb"></div></div>';
+  const box=$("#opts");
+  opts.forEach(o=>{
+    const b=document.createElement("button");b.type="button";b.className="opt";b.innerHTML=o;
+    b.addEventListener("click",()=>answer(b,o,q));box.appendChild(b);
+  });
+}
+function answer(btn,choice,q){
+  const ok=choice===q[2];
+  $$("#opts .opt").forEach(b=>{b.disabled=true;if(b.innerHTML===q[2])b.classList.add("right");});
+  if(!ok){btn.classList.add("wrong");Q.missed.push(q);}else Q.score++;
+  $("#fb").innerHTML='<div class="why"><strong>'+(ok?"Correct.":"Not quite.")+'</strong> '+q[4]+(ok?"":' The answer is: '+q[2]+'.')+'</div>'
+    +'<button class="btn" id="qNext" type="button" style="width:100%">'+(Q.i+1>=Q.list.length?"See results":"Next question")+'</button>';
+  const n=$("#qNext");n.addEventListener("click",()=>{Q.i++;showQ();window.scrollTo({top:0});});n.focus();
+}
+function showResult(){
+  const pct=Math.round(Q.score/Q.list.length*100);
+  if(Q.list.length>=10&&(S.best===null||pct>S.best)){S.best=pct;save();}
+  const msg=pct>=90?"A-range. You are ready.":pct>=80?"High B. A few more review passes and you are there.":pct>=70?"Getting close. Review the missed topics below.":"Keep studying. Use the Study tab on the topics you missed.";
+  let h='<div class="panel"><h2>Results</h2><div class="score">'+pct+'%</div><p><strong>'+Q.score+' of '+Q.list.length+' correct.</strong> '+msg+'</p>';
+  if(Q.missed.length){
+    h+='<h3 style="margin-top:18px">Review what you missed</h3>';
+    Q.missed.forEach(q=>{h+='<div class="miss"><strong>'+q[1]+'</strong><br>Answer: '+q[2]+'<br><span style="color:var(--muted)">'+q[4]+'</span></div>';});
+  }
+  h+='<div class="row" style="margin-top:14px">'+(Q.missed.length?'<button class="btn" id="qRetry" type="button">Retry missed ('+Q.missed.length+')</button>':"")+'<button class="btn ghost" id="qNew" type="button">New quiz</button></div></div>';
+  $("#quizArea").innerHTML=h;
+  const r=$("#qRetry");if(r)r.addEventListener("click",()=>startQuiz(shuffle(Q.missed)));
+  $("#qNew").addEventListener("click",quizSetup);
+  window.scrollTo({top:0});
+}
+
+/* ---------- CRAM SHEET ---------- */
+function renderCram(){
+  let h='<h3 style="margin-top:0">The 16 facts to know cold</h3><ol class="top12">'+TOP.map(t=>"<li>"+esc(t)+"</li>").join("")+"</ol>";
+  h+='<h3>Side-by-side comparisons</h3>';
+  h+='<div class="tblwrap"><table><thead><tr><th></th><th>Sunni</th><th>Shia</th></tr></thead><tbody>'
+   +'<tr><td><b>Successor view</b></td><td>Community chooses the caliph</td><td>Ali and his descendants</td></tr>'
+   +'<tr><td><b>First leader</b></td><td>Abu Bakr</td><td>Ali</td></tr>'
+   +'<tr><td><b>Key event</b></td><td>Umayyad and Abbasid caliphates</td><td>Karbala 680 (Husayn)</td></tr></tbody></table></div>';
+  h+='<div class="tblwrap" style="margin-top:12px"><table><thead><tr><th></th><th>Feudalism</th><th>Manorialism</th></tr></thead><tbody>'
+   +'<tr><td><b>Type</b></td><td>Political and military</td><td>Economic</td></tr>'
+   +'<tr><td><b>Relationship</b></td><td>Lord and vassal</td><td>Lord and serf</td></tr>'
+   +'<tr><td><b>Exchange</b></td><td>Land (fief) for military service and loyalty</td><td>Land and protection for labor and crops</td></tr></tbody></table></div>';
+  h+='<div class="tblwrap" style="margin-top:12px"><table><thead><tr><th></th><th>Roman Catholic</th><th>Eastern Orthodox</th></tr></thead><tbody>'
+   +'<tr><td><b>Leader</b></td><td>Pope in Rome</td><td>Patriarch of Constantinople</td></tr>'
+   +'<tr><td><b>Language</b></td><td>Latin</td><td>Greek</td></tr>'
+   +'<tr><td><b>Clergy</b></td><td>Priests celibate</td><td>Priests may marry</td></tr>'
+   +'<tr><td><b>Split</b></td><td colspan="2">Great Schism, 1054</td></tr></tbody></table></div>';
+  h+='<div class="tblwrap" style="margin-top:12px"><table><thead><tr><th></th><th>Aztec</th><th>Inca</th></tr></thead><tbody>'
+   +'<tr><td><b>Capital</b></td><td>Tenochtitlan</td><td>Cuzco</td></tr>'
+   +'<tr><td><b>Trade</b></td><td>Markets, pochteca merchants, cacao money</td><td>State redistribution, mit&#39;a labor tax</td></tr>'
+   +'<tr><td><b>Special feature</b></td><td>Tribute from conquered peoples</td><td>Roads, llamas, quipu</td></tr></tbody></table></div>';
+  h+='<div class="tblwrap" style="margin-top:12px"><table><thead><tr><th></th><th>Zheng He (Ming)</th><th>Later Europeans</th></tr></thead><tbody>'
+   +'<tr><td><b>Goal</b></td><td>Prestige, tribute, trade, diplomacy</td><td>Trade routes, forts, colonies, converting people</td></tr>'
+   +'<tr><td><b>Fleet</b></td><td>Huge: 60+ ships, 27,000 men</td><td>Small crews and a few ships</td></tr>'
+   +'<tr><td><b>Outcome</b></td><td>Ended in 1433</td><td>Led to empires</td></tr></tbody></table></div>';
+  h+='<h3>Timeline</h3><ul class="tl">'+TIMELINE.map(t=>'<li class="ch'+t[2]+'"><b>'+t[0]+'</b>'+esc(t[1])+'</li>').join("")+"</ul>";
+  h+='<h3>Test-taking tips for multiple choice</h3><ul class="top12">'
+   +'<li>Eliminate two answers first. Wrong answers often use the wrong era, wrong empire or the opposite effect.</li>'
+   +'<li>Look for causes and effects: what changed, who gained, who lost.</li>'
+   +'<li>Beware absolute words like “always,” “only,” and “never.” </li>'
+   +'<li>For “most important” or “best” questions, choose the answer that covers the broadest effect.</li>'
+   +'<li>Do not change an answer unless you can name a specific reason.</li></ul>';
+  $("#view-cram").innerHTML=h;
+}
+
+/* ---------- INIT ---------- */
+renderTopics();updateProgress();buildDeck();quizSetup();renderCram();
+</script>
+</body>
+</html>
